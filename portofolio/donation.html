@@ -1,0 +1,202 @@
+<html></html>
+</head>
+    <title>Waste Energy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #EAE9E5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 20px 20px; */
+            background-color: #EAE9E5;
+        }
+        .navbar .logo {
+            font-size: 32px;
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            font-weight: lighter;
+            margin-left: 20px;
+            letter-spacing: 2px;
+        }
+        .navbar .logo a {
+            text-decoration: none;
+            color: #333;
+            
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #888;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease-in;
+            
+        }
+        .navbar .menu a:hover {
+            color: #333;
+        }
+        .navbar .menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #34b7a7;
+            transition: width 0.3s ease-in;
+            -webkit-transition: width 0.3s ease-in;
+        }
+        .navbar .menu a:hover::after {
+            width: 100%;
+        }
+        .navbar .menu a.active {
+            color: #333;
+        }
+        .navbar .menu a.active::after {
+            display: none;
+        }
+        .navbar .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .navbar .social-icons a {
+            color: #888;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar .social-icons a:hover {
+            color: #333;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .contribute-box {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .contribute-box h2 {
+            margin-top: 0;
+        }
+        .contribute-box .amounts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .contribute-box .amounts button {
+            flex: 1 1 calc(50% - 10px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .contribute-box .other-amount {
+            margin-bottom: 20px;
+        }
+        .contribute-box .other-amount input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contribute-box .min-donation {
+            margin-bottom: 20px;
+            color: #888;
+        }
+        .contribute-box .proceed-btn {
+            background-color: #e9e8e6;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in;
+        }
+        .contribute-box .proceed-btn:hover {
+            background-color: #888888;
+        }
+        .footer {
+            color: #333;
+            font-size: 14px;
+            background-color: #eaeaea;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            
+        }
+        .footer a {
+            color: #00b3b3;
+            text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="logo"><a href="../index.html">WASTE ENERGY</a></h1>
+        <div class="menu">
+            <a href="../index.html">Home</a>
+            <a href="../program.html">Programs</a>
+            <a href="../events.html">Events</a>
+            <a href="../contribute.html" class="active">Contribute Now</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="contribute-box">
+            <h2><i class="fas fa-arrow-left"></i> Contribute Now</h2>
+            <p>Make a difference today</p>
+            <div class="amounts">
+                <button>IDR. 15.000</button>
+                <button>IDR. 30.000</button>
+                <button>IDR. 50.000</button>
+                <button>IDR. 75.000</button>
+                <button>IDR. 100.000</button>
+            </div>
+            <div class="other-amount">
+                <p>Other donation amounts</p>
+                <input type="text" placeholder="IDR">
+            </div>
+            <div class="min-donation">Min. donation of IDR 15,000</div>
+            <button class="proceed-btn">Proceed to Payment</button>
+        </div>
+    </div>
+    <div class="footer">
+        © Copyright <a href="#">Digital Minds</a>. All Rights Reserved
+        <br>
+        Designed by <a href="#">Digital Minds</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<html></html>
+<head>
+    <title>Join Volunteer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f8f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            height: 1000px;
+        }
+        .navbar {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 20px 20px; */
+            background-color: #EAE9E5;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 32px;
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            font-weight: lighter;
+            margin-left: 20px;
+            line-height: 1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .navbar .logo a {
+            text-decoration: none;
+            color: #333;
+            
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #888;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease-in;
+            
+        }
+        .navbar .menu a:hover {
+            color: #333;
+        }
+        .navbar .menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #34b7a7;
+            transition: width 0.3s ease-in;
+            -webkit-transition: width 0.3s ease-in;
+        }
+        .navbar .menu a:hover::after {
+            width: 100%;
+        }
+        .navbar .menu a.active {
+            color: #333;
+        }
+        .navbar .menu a.active::after {
+            display: none;
+        }
+        .navbar .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .navbar .social-icons a {
+            color: #888;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: lighter;
+        }
+        .navbar .social-icons a:hover {
+            color: #333;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin-top: 200px;
+            margin-bottom: 400px;
+            position: absolute;
+        }
+        h1 {
+            font-size: 32px; /* Increased font size */
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: calc(100% - 10px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .form-group input[type="text"], .form-group input[type="email"] {
+            width: calc(50% - 10px);
+            display: inline-block;
+        }
+        .form-group input[type="text"]:nth-child(1) {
+            width: calc(50% - 10px); /* Adjusted width for Name */
+        }
+        .form-group input[type="email"] {
+            width: calc(50% - 10px);
+            margin-left: 0px; /* Move to the left */
+        }
+        .form-group input[type="text"]:nth-child(3) {
+            width: calc(50% - 10px); /* Adjusted width for Phone Number */
+        }
+        .form-group input[type="text"]:nth-child(4) {
+            width: calc(50% - 10px);
+            margin-left: 10px; /* Move to the left */
+        }
+        .form-group small {
+            display: block;
+            margin-top: 5px;
+            color: #888;
+        }
+        .form-group textarea {
+            width: calc(100% - 10px);
+            height: 100px;
+        }
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto; /* Center the button */
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        .footer {
+            color: #333;
+            font-size: 14px;
+            background-color: #eaeaea;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+           
+            
+        }
+        .footer a {
+            color: #00b3b3;
+            text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="logo"><a href="../index.html">WASTE ENERGY</a></h1>
+        <div class="menu">
+            <a href="../index.html">Home</a>
+            <a href="../program.html">Programs</a>
+            <a href="../events.html">Events</a>
+            <a href="../contribute.html" class="active">Contribute Now</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Join Volunteer</h1>
+        <form>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" placeholder="Name">
+                <small>Name</small>
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" placeholder="ex: myname@example.com">
+                <small>example@example.com</small>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" placeholder="Phone Number">
+                <small>Phone Number</small>
+            </div>
+            <div class="form-group">
+                <label>Why are you willing to join</label>
+                <textarea></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Join Volunteer</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        © Copyright <a href="#">Digital Minds</a>. All Rights Reserved
+        <br>
+        Designed by <a href="#">Digital Minds</a>
+    </div>
+
+
+</body>
+</html>
